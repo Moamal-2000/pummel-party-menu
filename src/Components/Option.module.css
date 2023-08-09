@@ -1,0 +1,83 @@
+.option {
+  display: flex;
+  user-select: none;
+  cursor: pointer;
+}
+
+.option .titleHolder {
+  position: relative;
+}
+
+.option .titleHolder::before {
+  content: '';
+  position: absolute;
+  right: -4px;
+  bottom: 28px;
+  background-color: #fff;
+  width: 30px;
+  height: 4px;
+  z-index: 2;
+  transform: skew(313deg, 1deg);
+  -webkit-transform: skew(313deg, 1deg);
+  -moz-transform: skew(313deg, 1deg);
+  -ms-transform: skew(313deg, 1deg);
+  -o-transform: skew(313deg, 1deg);
+  rotate: -46deg;
+}
+
+@media (max-width: 490px) {
+  .option .titleHolder::before {
+    right: -4px;
+    bottom: 28px;
+  }
+}
+
+.option .titleHolder::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  bottom: 9px;
+  background-color: #fff;
+  width: 30px;
+  height: 4px;
+  z-index: 2;
+  transform: skew(313deg, 1deg);
+  -webkit-transform: skew(45deg, -362deg);
+  -moz-transform: skew(313deg, 1deg);
+  -ms-transform: skew(313deg, 1deg);
+  -o-transform: skew(313deg, 1deg);
+  rotate: -45deg;
+}
+
+@media (max-width: 490px) {
+  .option .titleHolder::after {
+    right: 14px;
+    bottom: 9px;
+  }
+}
+
+.option .title {
+  background-color: rgba(0, 0, 0, 0.766);
+  color: #fff;
+  font-size: 30px;
+  font-weight: 300;
+  padding: 16px 10px;
+  border: solid 4px #fff;
+  min-width: 340px;
+  clip-path: polygon(100% 0, 100% 46%, 88% 100%, 0 100%, 0 0);
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+}
+
+@media (max-width: 490px) {
+  .option .title {
+    min-width: 250px;
+  }
+}
+
+.option:hover .title {
+  background-color: rgba(0, 0, 0, 0.886);
+}
